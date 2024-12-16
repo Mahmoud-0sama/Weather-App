@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- ========= google font ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- ======== font awesome ======== -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- ========== main styling ========= -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class=" navbar navbar-expand-lg py-5 text-white">
+        <div class="container">
+            <img src="images/logo.png" class="me-2" alt="logo">
+            <div class="logo-type">
+                <a class="navbar-brand text-white" href="#">Weather</a>
+                <br />
+                <small>tagline goes here</small>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item px-4">
+                        <a class="nav-link curretn-menu active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#">Livecameras</a>
+                    </li>
+                    <li class="nav-item px-4">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li id="contactUs" class="nav-item px-4">
+                        <a class="nav-link" href="#Contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="Home" class="hero-image">
+        <div class="container">
+            <div class="find-location position-relative">
+                <input id="searchLocation" class="your-location" type="text" placeholder="Find your location ">
+                <input id="btnLocation" class="position-absolute" type="button" value="Find">
+            </div>
+        </div>
+    </section>
+    <section id="News">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <div class="card card-one">
+                        <div id="today" class="card-header d-flex justify-content-between">
+                            <div class="default-day">Friday</div>
+                            <div class="default-number ms-auto">8</div>
+                            <div class="default-date ps-1">December</div>
+                        </div>
+                        <div class="card-body">
+                            <h5 id="todayLocation" class="location">cairo</h5>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div id="todayTemp" class="degree pt-2">22.9</div>
+                                <span class="pb-3 pb-5 degree">o</span>
+                                <span class="degree pt-2">C</span>
+                            </div>
+                            <div class="image-icon">
+                                <img src="" id="todayImg" alt="">
+                            </div>
+                            <div id="todayIcon" class="custom my-3 text-info">Mist</div>
+                            <div class="icon">
+                                <span>
+                                    <img src="images/icon-umberella.png" alt="umberella">
+                                    <small id="todayHumidity" class="text-white"></small>
+                                    <span class="fs-6">%</span>
+                                </span>
+                                <span>
+                                    <img src="images/icon-wind.png" alt="wind">
+                                    <small id="todayWind" class="text-white"></small>
+                                    <span class="fs-6">km/h</span>
+                                </span>
+                                <span>
+                                    <img src="images/icon-compass.png" alt="compass">
+                                    <small id="todayWindDirection" class="text-white">East</small>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-two">
+                        <div class="card-header text-center">
+                            <div id="nextDayName">Friday</div>
+                        </div>
+                        <div class="card-body text-center pt-5">
+                            <img src="" id="nextDayImg" width="48" alt="sun">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div id="nextMaxTemp" class="degree-two-three">22.9</div>
+                                <span class="pb-3">o</span>
+                                <span>C</span>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <small id="nextMinTemp">13.9</small>
+                                <small class="pb-2">o</small>
+                            </div>
+                            <div id="nextConditionText" class="my-3 text-info text-center">Mist</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-three">
+                        <div class="card-header text-center">
+                            <div id="afterNextDayName">Friday</div>
+                        </div>
+                        <div class="card-body text-center pt-5">
+                            <img src="" width="48" id="afterNextDayImg" alt="sun">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div id="afterNextMaxTemp" class="degree-two-three">22.9</div>
+                                <span class="pb-3">o</span>
+                                <span>C</span>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <small id="afterNextMinTemp">14.1</small>
+                                <small class="pb-2">o</small>
+                            </div>
+                            <div id="afterNextConditionText" class="my-3 text-info">Partly Cloudy</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="py-5">
+        <div class="container">
+            <div class="row gy-2">
+                <div class="col-md-8">
+                    <div class="subscript-form position-relative">
+                        <input id="yourEmailInput" class="youremail" type="text"
+                            placeholder="Enter your email to subscribe... ">
+                        <input id="subscribeInput" class="position-absolute" type="button" value="subscribe">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="social-links">
+                        <span class="fa-stack" style="vertical-align: top;">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <i class="fa-brands fa-facebook-f fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="fa-stack" style="vertical-align: top;">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="fa-stack" style="vertical-align: top;">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <i class="fa-brands fa-google-plus-g fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="fa-stack" style="vertical-align: top;">
+                            <i class="fa-solid fa-circle fa-stack-2x"></i>
+                            <i class="fa-brands fa-pinterest fa-stack-1x fa-inverse"></i>
+                        </span>
+
+                    </div>
+                </div>
+                <p class="text-secondary pt-4">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
